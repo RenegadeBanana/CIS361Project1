@@ -1,0 +1,7 @@
+proj: proj.o
+	gcc proj1.0 -o project1
+proj.o: proj1.c
+
+test: test1 test2 
+test1: ./project1 1 PIZZAPIE data.txt encryptedFile1.txt
+	./project1 2 PIZZAPIE encryptedFile1.txt decryptedFile1.txt
